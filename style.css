@@ -61,9 +61,12 @@
 #btn2:hover{
     cursor: pointer;
 }
-div{
-    margin: 10px;
-}
+
 p{
-    margin: 0 10px 0 0;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+li{
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

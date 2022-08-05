@@ -1,8 +1,14 @@
-const pesquisa = document.querySelector('#barra');
+
 const btn = document.querySelector('#btn');
 const btn2 = document.querySelector('#btn2');
 const caixa= document.querySelector('.caixa');
 const ul = document.querySelector('#lista');
+const paragrafo = document.createElement('p');
+
+function inicia(){
+    caixa.appendChild(paragrafo);
+ }
+ window.addEventListener('load', inicia())
 
 
 
@@ -70,6 +76,7 @@ const filmes = [{
     "lancamento": 2010,
 }];
 
+
     
     function mostraFilmes(){
         for(const lista of filmes){  
@@ -80,7 +87,19 @@ const filmes = [{
         return li;
     }
 
+    function procuraFilmes(){
+        let valor= document.querySelector('#barra').value;
+        let buscaFilmes = filmes.filter(filme => filme.titulo.includes(`${valor}`))
+        //Método para converter um objeto em String
+        const filme = JSON.stringify(buscaFilmes)
+
+        return filme;
+    }
+
 btn2.addEventListener('click', ()=>{
     
    ul.innerHTML = mostraFilmes()
+})
+btn.addEventListener('click', ()=>{
+paragrafo.innerHTML = "O filme que você deseja e: "+ procuraFilmes() , console.log(procuraFilmes());
 })
