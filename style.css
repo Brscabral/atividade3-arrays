@@ -1,6 +1,6 @@
 .corpo{
     display: flex;
-    height: auto;
+    height: 140vh;
     width: auto;
     flex-direction: column;
     align-items: center;
@@ -9,11 +9,19 @@
     background: linear-gradient(#F5F5F5,#483D8B);
     
 }
+.cabecalho{
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+    font-size: 2.35rem;
+}
 .caixa{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    max-height: 130vh;
     width: 60vh;
     margin: 50px 0 0 0;
     background-image: url('imagem2.jpg');
